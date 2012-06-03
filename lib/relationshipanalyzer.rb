@@ -83,8 +83,7 @@ class RelationshipAnalyzer
       tfidf(item, word)
     }.map {|x|
       x ** 2
-    }.inject(&:+))
+    }.inject(0.0, &:+))
   end
 
 end
-
